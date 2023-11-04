@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\Tutorial;
 use Symfony\Component\Form\Extension\Core\Type\SearchType;
 use App\Form\TutorialType;
-use App\Repository\AnswerRepository;
 use App\Repository\TutorialRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

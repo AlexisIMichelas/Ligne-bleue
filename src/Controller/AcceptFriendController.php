@@ -31,7 +31,6 @@ class AcceptFriendController extends AbstractController
     public function acceptFriend(Request $request, Friend $friend): Response
     {
         $userTarget = $friend->getSendTo();
-        // Vérifier si l'utilisateur connecté correspond bien au destinataire $userTarget
         /** @var User $user */
         $user = $this->getUser();
         if ($userTarget !== $user) {
@@ -47,7 +46,6 @@ class AcceptFriendController extends AbstractController
             $choice = $form->get('choice')->getData();
 
             if ($choice === 'accept') {
-                // Créer une nouvelle instance de Friend
                 $friend->setCreatedAt(new DateTimeImmutable('now'));
                 $friend->setStatus('accepted');
                 $this->entityManager->flush();

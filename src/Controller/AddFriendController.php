@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
 use App\Entity\Friend;
 use DateTimeImmutable;
 use App\Form\AddFriendType;
@@ -23,7 +22,6 @@ class AddFriendController extends AbstractController
         Request $request,
         MailerInterface $mailer,
         UserRepository $userRepository,
-        AddFriendType $addFriendType,
         FriendRepository $friendRepository,
         EntityManagerInterface $entityManager
     ): Response {
